@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/Proyecto-final/CSS/modal_EST_PROF.css">
+    <link rel="stylesheet" href="/Proyecto-final/CSS/Estudiantes_y_profes.css">
+    <link rel="stylesheet" href="/Proyecto-final/CSS/menu.css">
+    <link rel="stylesheet" href="/Proyecto-final/CSS/btnTablas.css">
+    <script src="/Proyecto-final/JS/menu.js"></script>
+    
+    
+
+</head>
+<header>
+    <a href="#" class="logo">Ever Leonardo🔆</a>
+
+    <nav class="navBar">
+    <ul>
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./estudiantes.html">Estudiantes</a></li>
+        <li><a href="./CrearEstudiante.html">Crear estudiantes</a></li>
+        <li><a href="./profesores.html">Profesores</a></li>
+        <li><a href="./CrearProfesores.html">Crear Profesores</a></li>
+        <li><a href="./Carreras.html">Carrera</a></li>
+        <li><a href="./CrearCarrera.html">Crear carrera</a></li>
+    </ul>
+    </nav>
+</header>
+<body>
+    <div class="home">
+        <div class="grid-container">
+            <table class="grid-item">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido Materno</th>
+                        <th scope="col">Apellido Paterno</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Sexo</th>
+                        <th scope="col">Nacimiento</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Nacionalidad</th>
+                        <th scope="col">Carrera</th>
+                    </tr>
+                </thead>
+                <tbody class="datos" id="datosExtraidos">
+
+                </tbody>
+            </table>
+
+            <form id="formulario">      
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+            
+                    <div class="modalbody">
+                    <button type="button" class="btnX " data-bs-dismiss="modal">X</button>
+                    <h4 class="letras"  >Editar Estudiantes 👨🏻‍🎓 </h4>
+            
+                    <div class="formStyle">
+                            <div class="grupo">
+                                <label for="tipotexto"><h4 class="letras">id:</h4>
+                                    <input  type="hidden"name="id" id="id" aria-describedby="helpId" required ><span class="barra"></span>
+                                    <input  type="text" name="ids" id="ids" aria-describedby="helpId" required disabled><span class="barra"></span>  
+                                </label>
+                            </div>
+            
+                
+                                <div class="izquierda">
+                                    <div class="grupo">
+                                        <label for="tipotexto"><h4 class="letras" >Cedula.</h4></label>
+                                        <input id="cedula" name="cedula" placeholder="ingresa tu cedula" required><span class="barra"></span>
+                                    </div>
+                
+                                    <div class="grupo">
+                                        <label for="tipotexto"><h4 class="letras">Nombre.</h4></label>
+                                        <input type="text" id="nombre" name="nombre" placeholder="ingresa tu nombre" required><span class="barra"></span>
+                                    </div>
+                                    <div class="grupo">
+                                        <label for="tipotexto"> <h4 class="letras">Apellido del padre.</h4></label>
+                                        <input type="text" id="apellidopaterno" name="apellidopaterno" placeholder="Apellido del padre" required><span class="barra"></span>
+                                    </div>
+            
+                                    <div class="grupo">
+                                        <label for="tipotexto"><h4 class="letras">Apellido de la madre.</h4></label>
+                                        <input type="text" id="apellidomaterno" name="apellidomaterno"  placeholder="Apellido de la madre" required><span class="barra"></span>
+                                    </div>
+            
+                                    <div class="grupo">
+                                        <label for="tipotexto"><h4 class="letras">Telefono.</h4></label>
+                                        <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required><span class="barra"></span>
+                                    </div>
+                                
+            
+                                    <div class="grupo">
+                                        <label for="tipotexto"><h4 class="letras">Telefono.</h4></label>
+                                        <input type="text" id="sexo" name="sexo" placeholder="sexo" required><span class="barra"></span>
+                                    </div>
+            
+                                    <div class="grupo">
+                                        <label for="tipotexto"><h4 class="letras">Telefono celular.</h4></label>
+                                        <input type="tel" id="telefonocelular" name="telefonocelular" placeholder="Telefono Celular" required><span class="barra"></span>
+                                    </div>
+            
+                                </div>
+            
+                                <div class="derecha">
+            
+                                    <div class="grupo">
+                                        <label for="email"><h4 class="letras">Correo electonico.</h4></label>
+                                        <input type="email" id="correoelectronico" name="correoelectronico" placeholder="Ingresa tu email" required><span class="barra"></span>
+                                    </div>
+            
+                                    <div class="grupo">
+                                        <label for="nacimiento"><h4 class="letras">Fecha de nacimiento.</h4></label>
+                                        <input type="date" id="fechanacimiento" name="fechanacimiento" placeholder="Ingresa tu edad" required><span class="barra"></span>
+                                    </div>
+                
+                                    <div class="grupo">
+                                        <label for="Nacionalidad"> <h4 class="letras">Nacionalidad.</h4></label>
+                                        <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Ingresa tu Nacionalidad" required><span class="barra"></span>
+                                    </div>
+                    
+                                    <div class="grupo">
+                                        <label for="tipo area de texto"><h4 class="letras">Direccion.</h4></label>
+                                        <input id="direccion" name="direccion" placeholder="Ingresa tu Direccion" required><span class="barra"></span></input>
+                                    </div>
+            
+                                
+                                    <div class="grupo">
+                                        <label for="tipo area de texto"><h4 class="letras">Carrera.</h4></label>
+                                        <input id="idCarreras" name="idCarreras" placeholder="Carrera" required><span class="barra"></span></input>
+                                    </div>
+                                    </div> 
+                                    
+                                    <div class="btn3">
+                                        <button type="submit" class="btn5 btn btn-4">Guardar</button>
+                                    </div>
+            
+                                </div>
+                        </div>       
+                    </div>
+                </div>
+                </div>
+                        </form>
+                                </div>
+                                    </div>
+                                </form>
+
+
+<script>
+    var contenidoTabla = document.querySelector('#datosExtraidos');
+    var formulario = document.getElementById('formulario');
+
+    formulario.addEventListener('submit', 
+    function(e){
+    e.preventDefault();
+
+    var datos = new FormData(formulario);
+
+    var datosEnviar = {
+            id:datos.get('id'),
+            cedula:datos.get('cedula'),
+            correoelectronico:datos.get('correoelectronico'),
+            telefono:datos.get('telefono'),
+            telefonocelular:datos.get('telefonocelular'),
+            fechanacimiento:datos.get('fechanacimiento'),
+            sexo:datos.get('sexo'),
+            direccion:datos.get('direccion'),
+            nombre:datos.get('nombre'),
+            apellidopaterno:datos.get('apellidopaterno'),
+            apellidomaterno:datos.get('apellidomaterno'),
+            nacionalidad:datos.get('nacionalidad'),
+            
+            usuario:"Estudiante"
+    }
+
+    console.log(datosEnviar)
+
+
+    console.log(datosEnviar);
+
+    fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarProfesores.php",
+    {
+    method:"POST"  ,
+    body:JSON.stringify(datosEnviar)
+    })
+
+    .then(repuesta=>repuesta.json())
+    .then((datosRespuesta)=>{
+    alert('Datos actualizados: '+ datosEnviar.id);
+    
+    })        
+    .catch(console.log)
+        }
+    )
+
+    function cargarDatos(){
+    fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaProfesores.php")
+    .then(respuesta=>respuesta.json())
+    .then((datosRespuesta)=>{
+    setTabla(datosRespuesta.data)
+        }            
+    )
+        .catch(console.log)
+    }
+
+    function setTabla(datos){
+        for(let valor of datos){
+
+    contenidoTabla.innerHTML += `
+        <tr> 
+                <td>${valor.id}</td>    
+                <td>${valor.cedula}</td>
+                <td>${valor.nombre}</td>                      
+                <td>${valor.apellidomaterno}</td>                  
+                <td>${valor.apellidopaterno}</td>
+                <td>${valor.telefono}</td>
+                <td>${valor.telefonocelular}</td>
+                <td>${valor.correoelectronico}</td>
+                <td>${valor.sexo}</td>
+                <td>${valor.fechanacimiento}</td>
+                <td>${valor.direccion}</td>
+                <td>${valor.nacionalidad}</td>
+                <td>${valor.idCarreras}</td>
+            <td>
+                <a name="" id="" class="btn btn-4" href="#" role="button"  
+                onclick="editar( ${valor.id},'${valor.cedula}','${valor.correoelectronico}','${valor.telefono}','${valor.telefonocelular}','${valor.fechanacimiento}', '${valor.sexo}','${valor.direccion}',
+                '${valor.nombre}}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}','${valor.idCarreras}' )">Editar</a>
+                ||
+                <a name="" id="" class="btn btnDEL" href="#" role="button" onclick="eliminar(${valor.id})">Eliminar</a>
+            </td>
+        </tr>
+    `;            
+}
+}
+
+    function editar(id,cedula,correoelectronico,telefono,telefonocelular,fechanacimiento,sexo,direccion,nombre,apellidopaterno,apellidomaterno
+    ,nacionalidad,idCarreras
+    ){
+    var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+    myModal.show();
+        $("#id").val(id);
+        $("#ids").val(id);
+        $("#cedula").val(cedula);
+        $("#correoelectronico").val(correoelectronico);
+        $("#telefono").val(telefono);
+        $("#telefonocelular").val(telefonocelular);
+        $("#fechanacimiento").val(fechanacimiento);
+        $("#sexo").val(sexo);
+        $("#direccion").val(direccion);
+        $("#nombre").val(nombre);
+        $("#apellidopaterno").val(apellidopaterno);
+        $("#apellidomaterno").val(apellidomaterno);
+        $("#nacionalidad").val(nacionalidad); ;
+        $("#idCarreras").val(idCarreras);
+    }
+
+    function eliminar(id){
+        eliminarDatos(id);
+    }
+
+    function eliminarDatos(id){
+        var datosEnviar = {
+        id: id          
+        }
+
+    fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarProfesores.php",
+        {
+            method:"POST"  ,
+            body:JSON.stringify(datosEnviar)
+            })
+            .then(repuesta=>repuesta.json())
+            .then((datosRespuesta)=>{
+            alert('Registro eliminado: '+id);
+            window.location = 'profesores.html';
+        })        
+        .catch(console.log)
+    }
+
+    $(document).ready(function () {
+        cargarDatos();
+    });
+    </script>

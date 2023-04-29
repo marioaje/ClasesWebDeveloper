@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script>
+        function printTextName(){
+            
+            var Nombre = document.getElementById("Nombre").value;       
+            document.getElementById("Resultado").innerHTML = Nombre;
+        }
+    </script> -->
+    <script src="codigo.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="navId" role="tablist">
+            <li class="nav-item">
+                <a href="#tab1Id" class="nav-link active" data-bs-toggle="tab">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#tab2Id">Action</a>
+                    <a class="dropdown-item" href="#tab3Id">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#tab4Id">Action</a>
+                </div>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="#tab5Id" class="nav-link" data-bs-toggle="tab">Another link</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="#" class="nav-link disabled" data-bs-toggle="tab">Disabled</a>
+            </li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+            <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+            <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+            <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+            <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+        </div>
+        
+        <form method="post" action="">
+            <div class="mb-3">
+              <label for="" class="form-label"></label>
+              <input type="text"
+                class="form-control" name="Nombre" id="Nombre" aria-describedby="helpId" placeholder="">
+              <small id="helpId" class="form-text text-muted">Nombre</small>
+            </div>
+            <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="printTextName()">Imprimir</a>
+        </form>
+        <div id="Resultado">
+
+        </div>
+    </div>
+</body>
+</html>

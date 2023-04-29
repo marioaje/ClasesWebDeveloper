@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Con estilos CSS</title>
+    <style>
+/* Selectores*/
+        body{
+            background-color: chartreuse;
+        }
+        /* h1{
+            text-align: center;
+        } */
+        /* p{
+            font-family: Verdana;
+            font-size: 50px;
+            background-color: azure;
+        } */
+
+/* Por id */
+        #primerparrafo{
+            font-family: Verdana;
+            font-size: 50px;
+            background-color: blue;
+            color: white;
+        }
+
+        #segundoparrafo{
+            font-family: Verdana;
+            font-size: 50px;
+            background-color: coral;
+            color: white;
+        }        
+
+/* Por clases*/
+/* Los estilos de la clase no se muestran si tiene estilos por ID */
+        .frontend{
+            color: red;
+            text-align: center;
+        }
+
+
+/* Por clase pero en un selector determinado*/
+        p.frontend{
+            color: blue;
+            text-align: center;
+        }
+
+        p.fondo{
+            background-color: darkorange;
+        }
+
+        p.letra{
+            font-size: 10px;
+        }
+
+/* Selector universal funciona siempre y 
+cuando no tenga clases ni id's */
+        *{
+            background-color: darkgoldenrod;
+        }
+
+/* Por grupo         */
+        h1, h2, h3{
+            text-align: center;
+            background-color: red;
+            color: white;
+        }   
+    </style>
+</head>
+<body>
+    <h1>21 Marzo</h1>
+    <p id="primerparrafo">1-Ya gane el modulo 1 en el mes 1</p>
+    <p class="letra" id="segundoparrafo">2-Bienvenidos al modulo 2 en el mes 2</p>
+    <p class="frontend">3-Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        Accusamus optio eos cupiditate dignissimos ab magni alias
+         quas veniam est, ea provident. Repudiandae iste molestiae
+          sed maxime suscipit eveniet, velit quaerat.</p>
+    <p class="frontend fondo letra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, sequi ratione nihil culpa natus deserunt provident qui. Unde id eligendi nulla expedita, velit consectetur saepe quisquam impedit omnis veniam reiciendis!</p>
+    
+    <h2>Segundo encabezado</h2>\
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos qui necessitatibus, ab magni, nobis consequatur neque laboriosam aliquid fugiat autem commodi facilis ullam tempore, molestiae voluptatibus! Quibusdam quia ipsum veritatis.
+    </p>
+    <h3>Hola clase</h3>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        
+        let Persona = {
+            cedula: "123",
+            nombre: "Mario",
+            apellido: "Jimenez", 
+            correo:"mario@gm.com",
+            telefono:"61383453",
+            sexo: "Hombre",
+            edad: 45,
+            fechanacimiento: "1965/11/11"
+        };     
+
+
+    </script>
+</head>
+<body>
+    <div class="container">        
+        <div class="mb-3">
+          <label for="" class="form-label">Nombre</label>
+          <label for=""><Span id="nombre"></Span></label>          
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">cedula</label>
+            <label for=""><Span id="cedula"></Span></label>          
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">apellido</label>
+            <label for=""><Span id="apellido"></Span></label>          
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <label for=""><Span id="nombre"></Span></label>          
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <label for=""><Span id="nombre"></Span></label>          
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <label for=""><Span id="nombre"></Span></label>          
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Nombre</label>
+            <label for=""><Span id="nombre"></Span></label>          
+          </div>                                                  
+        <a name="" id="" class="btn btn-primary" href="#" role="button" onclick="loadinformation()">Load Information</a>
+        <button type="reset" class="btn btn-danger">Clear</button>
+    </div>
+    <script>
+        function loadinformation(){
+            document.getElementById("nombre").innerHTML = Persona.nombre;
+            document.getElementById("cedula").innerHTML = Persona.cedula;
+            document.getElementById("apellido").innerHTML = Persona.apellido;
+        }
+    </script>
+</body>
+</html>

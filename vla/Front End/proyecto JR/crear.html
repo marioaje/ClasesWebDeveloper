@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="nav-link" href="listarCurso.html">Cursos</a>
+            <a class="nav-link" href="crearCurso.html">Crear Curso</a>
+        </nav>        
+        
+        <div class="container">
+            <h1>Dashboard</h1>
+            <form id="formulario">
+                <!-- onSubmit="return enviarDatos()" -->
+                <div className="mb-3">
+                    <label htmlFor="" className="form-label">Nombre</label>
+                    <input type="text" className="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Ingrese el nombre"   required></input>
+                    <small id="helpId" className="form-text text-muted">Ingrese el Nombre</small>
+                </div>    
+                <div className="mb-3">
+                  <label htmlFor="" className="form-label">Descripcion</label>
+                  <textarea className="form-control" name="descripcion" id="descripcion" rows="3" placeholder="Ingrese la descripcion" required></textarea>
+                </div>    
+                <div className="mb-3">
+                    <label htmlFor="" className="form-label">Tiempo</label>
+                    <input type="text" className="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Ingrese el tiempo lectivo" required></input>
+                    <small id="helpId" className="form-text text-muted">Ingrese el tiempo de la carrera</small>
+                </div>                                                                   
+                <div className="mb-3">
+                    <button type="submit" className="btn btn-primary">Crear</button>
+                    ||
+                    <button type="reset" className="btn btn-danger">Limpiar</button>   
+                    //
+                    <button type="button" id="crearjquery" className="btn btn-primary">Crear JQuery</button>             
+                </div>
+            </form>
+
+        </div>
+    </div>    
+</body>
+<script>
+
+var formulario = document.getElementById('formulario');
+
+formulario.addEventListener('submit', function(e){
+    e.preventDefault();
+    var datos = new FormData(formulario);
+
+    // console.log(datos.get('nombre'));
+    // console.log(datos.get('descripcion'));
+    // console.log(datos.get('tiempo'));
+    // console.log(datos.get('nombre'));
+    var datosEnviar = {
+                            nombre:datos.get('nombre'),
+                            descripcion:datos.get('descripcion'),
+                            tiempo:datos.get('tiempo'),
+                            usuario:"Prof. Mario"
+                        } 
+      //  alert("datos"+datosEnviar);
+     //   console.log("Datos Enviados", e);
+
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/InsertarCursos.php",
+        {
+            method:"POST",
+            body:JSON.stringify(datosEnviar)
+        })//enviamos la url
+        .then(respuesta=>respuesta.json())//solicitamos el json
+        .then((datosRespuesta)=>{
+            console.log(datosRespuesta);                   
+            alert("Datos ingresados");
+            window.location = '../listarCurso.html';
+           // this.props.history.push("/");
+        })//cargamos los datos
+        .catch(console.log)//
+})
+
+      enviarDatos = (e) =>{
+        
+       
+        var datosEnviar = {
+                            nombre:"nombre",
+                            descripcion:"descripcion",
+                            tiempo:"tiempo",
+                            usuario:"Prof. Mario"
+                        } 
+      //  alert("datos"+datosEnviar);
+     //   console.log("Datos Enviados", e);
+
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/InsertarCursos.php",
+        {
+            method:"POST",
+            body:JSON.stringify(datosEnviar)
+        })//enviamos la url
+        .then(respuesta=>respuesta.json())//solicitamos el json
+        .then((datosRespuesta)=>{
+            console.log(datosRespuesta);          
+            this.setState({ datosCargados:true});
+            alert("Datos ingresados");
+            window.location = '/ListarCursos';
+           // this.props.history.push("/");
+        })//cargamos los datos
+        .catch(console.log)//
+       // e.preventDefault();
+      }
+
+      $("#crearjquery").click(function (e) { 
+        e.preventDefault();
+
+        var datosEnviar = {
+                            nombre:$("#nombre").val(),
+                            descripcion:datos.get('descripcion'),
+                            tiempo:datos.get('tiempo'),
+                            usuario:"Prof. Mario"
+                        } 
+
+        console.log(datosEnviar);
+        
+      });
+
+
+</script>
+</html>

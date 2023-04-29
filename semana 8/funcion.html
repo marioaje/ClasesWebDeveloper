@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        a = 3;
+        b = 13;
+        c = 0;//Inicializar la variable numero en 0        
+
+        //Declarar una variable con sintaxis Pascal
+        ResultadoSuma = a + b;        
+        ResultadoResta = a - b;
+        ResultadoDivision = a / b;
+        ResultadoMultiplicacion = a * b;
+
+        function MiFuncion(){
+            alert("Entre");
+        }
+
+        function Sumar(){
+            //alert(ResultadoSuma);
+            document.getElementById("ResultadoSuma").innerHTML = ResultadoSuma;
+            alert( document.getElementById("numero1").value );
+        }
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <label for="">Operacion de funcion</label>
+        <button onclick="MiFuncion()">Mi funcion</button>        
+        <label for="">Operacion de suma</label>
+        <input id="numero1" type="text">
+        <button type="button" class="btn btn-success" onclick="Sumar()">Sumar</button>        
+        <label id="ResultadoSuma"for="ResultadoSuma"></label>
+    </div>
+</body>
+</html>

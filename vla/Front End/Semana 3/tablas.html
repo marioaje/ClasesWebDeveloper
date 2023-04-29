@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designer</title>
+    <style>
+        /* Estilos por defecto */
+        *{
+            text-align: center;
+            box-sizing: border-box;
+            /* background-color: aqua; */
+        }
+        .header{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 60px;
+        }
+        .menu{
+            background-color: gray;
+            color: black;
+            width: 20%;            
+        }
+        .principal{
+            background-color: red;
+            color: white;
+            width: 60%;
+        }
+        .rss{
+            background-color: orange;
+            color: blue;
+            width: 20%;
+        }
+        .footer{
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 40px;
+        }
+        .main{
+            height: 400px;
+        }
+        .acomodador{
+            position: absolute;
+            width: 100%;
+
+        }
+        /* para las filas */
+        .gridrow{
+            overflow: auto;
+            position: relative;
+        }
+        .itemmenu{
+            width: 100%;
+            margin-top: 5px;
+            background-color: green;
+        }
+        .contentmenu{
+            float: left;
+            height: 100%;
+        }
+        .contentprincipal{
+            float: left;
+            height: 100%;
+        }
+        .contentrss{
+            float: left;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="acomodador">
+        <div class="header gridrow">
+            Header, Login, Logo
+        </div>
+        <div class="main gridrow">
+            <div class="menu contentmenu">
+                <div class="itemmenu">Dashboard Menu 1</div>
+                <div class="itemmenu">Menu 2</div>
+                <div class="itemmenu">Menu 3</div>
+                <div class="itemmenu">Menu 4</div>
+            </div>
+            <div class="principal contentprincipal">
+                <h1>Tablas</h1>
+                <table>
+                    <!-- tr se utiliza para las filas o lineas
+                    th columnas de encabezado
+                    td columnas de datos -->
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                    </tr>
+            
+                    <tr>
+                        <td>01</td>
+                        <td>Mario</td>
+                        <td>Jimenez</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Isaac</td>
+                        <td>Jimenez</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="rss contentrss">Rss</div>
+        </div>
+        <div class="footer gridrow">
+            Footer
+        </div>
+    </div>
+</body>
+</html>

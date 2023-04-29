@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#botonif").click(function (e) { 
+                FuncionSwitch();
+                
+            });
+        });
+
+
+
+        function FuncionSwitch(){
+            var ColorSeleccionado = 0;
+            ColorSeleccionado = parseInt( document.getElementById("Colores").value, 10);
+   
+             switch( ColorSeleccionado ){
+                case 1:
+                   // alert("1-Color Rojo");
+                   $("#Resultado").css('background-color', 'red');
+                    break;
+                case 2:
+                    //alert("2-Color Azul");
+                    $("#Resultado").css('background-color', 'blue');
+                    break;
+                case 3:     
+                    //alert("3-Color Verde");   \
+                    $("#Resultado").css('background-color', 'green');
+                    break;
+                case 4:  
+                    //alert("4-Color Amarrillo");
+                    $("#Resultado").css('background-color', 'yellow');
+                    break;
+                case 5:
+                    //alert("5-Color Rosado");
+                    $("#Resultado").css('background-color', 'pink');
+                    break;
+                case 6:
+                    //alert("6-Color Morado");
+                    $("#Resultado").css('background-color', 'purple');
+                    break;
+                default:
+                    alert("Opcion invalida");
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+   <div class="container-fluid">
+        <h1>Declaracion Switch</h1>
+        <p>Sirve para realizar un seleccionador</p>
+        <ul>
+            <li>1-Color Rojo</li>
+            <li>2-Color Azul</li>
+            <li>3-Color Verde</li>
+            <li>4-Color Amarrillo</li>
+            <li>5-Color Rosado</li>
+            <li>6-Color Morado</li>
+        </ul>
+        <div class="mb-3">
+        <label for="" class="form-label"></label>
+        <input type="number" class="form-control" name="Colores" id="Colores" aria-describedby="helpId" placeholder="Seleccionador de color">
+        <small id="helpId" class="form-text text-muted">Seleccionador de color</small>
+        </div>
+        <a name="botonif" id="botonif" class="btn btn-success" role="button" >Invocar If</a>
+        <!-- onclick="FuncionSwitch()" -->
+        <div id="Resultado" class="container">
+            <br>
+        </div>
+   </div>
+</body>
+</html>

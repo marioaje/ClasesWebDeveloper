@@ -1,0 +1,28 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+Person(admin, "Administrator", $sprite="person2", $link="")
+System_Boundary(c1, "SAS", $link=""){ 
+   Container(web_app, "Web Application SAS", "C#, 4.1 MVC, JQuery, Boostrap 3.9", "Allows Traders, SEO Admin, RAF Admin, Suppor Websites, Video Game Tools, Banner, Game Filter, Menu")
+    Container(svc,"WCF Service Internal", "C#, 4.1 MVC", "Allows Brands, SEO Admin, RAF Admin, Suppor Websites, Video Game Tools, Banner, Game Filter, Menu")
+
+}
+Container(svcSchedule,"API Schedule", "C#, MVC", "Allows Leagues")
+Container(svcApiMultistream,"API Multistream", "C#, MVC", "Allows Providers Video: UNAS, Perform, IMG")
+
+System(site, "Site Brand", "Allows Brands, SEO Admin, RAF Admin, Suppor Websites, Video Game Tools, Banner, Game Filter")
+ContainerDb(dbSAS, "Database", "Microsoft SQL SAS DB4-1", "Backend Information Website Brands", $link="")
+
+
+System_Boundary(c2, "SAS", $link=""){ 
+      Container(svcex, "WCF Service External", "C#, 4.1 MVC", "Allows Brands, SEO Admin, RAF Admin, Suppor Websites, Video Game Tools, Banner, Game Filter, Menu")
+}
+
+Rel(web_app, svc, "Brands", "HTTPS", $link="")
+Rel_L(web_app, svcSchedule, "Read", "HTTPS", $link="")
+Rel_R(web_app, svcApiMultistream, "Read", "HTTPS", $link="")
+Rel(admin, web_app, "Brands Get information Banners, GameFilters, SEO, Video Events, GameFilter, Menu", "HTTPS", $link="")
+Rel_R(svc, dbSAS, "Read/Writes")
+Rel_L(svc, dbSAS, "Read/Writes")
+Rel(dbSAS, svcex, "Brands Get information Banners, GameFilters, SEO, Video Events, GameFilter, Menu", "HTTPS", $link="")
+Rel(svcex, site,  "Request Brands Banners, GameFilters, SEO, Video Events, GameFilter, Menu", "HTTPS", $link="")
+@enduml

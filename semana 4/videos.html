@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color: darkgreen;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav{
+            float: left;
+            width: 20%;
+            height: 600px;
+            background: yellow;
+            padding: 20px;
+        }
+
+        nav ul{
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article{
+            background-color: blue;
+            color: white;
+            float: left;
+            width: 80%;
+            height: 600px;
+            padding: 20px;
+        }
+
+        section::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer{
+            background-color: rgb(100, 0, 0);
+            color: white;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="http://www.puntarenas.go.cr/">Puntarenas</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/San_Jos%C3%A9_(Costa_Rica)">San Jose</a></li>
+                <li><a href="https://www.munialajuela.go.cr/">Alajuela</a></li>                
+                <li><a href="videos.html">Seccion de videos</a></li>
+                <li><a href="semana1.html">Seccion de Semana 1</a></li>
+            </ul>
+        </nav>
+        <article>
+            <h2>Seccion de Videos</h2>
+            <h2>Hipervinculo</h2>  
+            <iframe width="80%" height="450px" src="https://www.youtube.com/embed/zr1bP7w-mdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+        </article>
+    </section>
+
+    <footer>
+        <p>Mario J.</p>
+    </footer>
+
+</body>
+</html>

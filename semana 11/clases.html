@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var animal = {
+            especie : "Pajaro",
+            alas : 2,
+            plumas : true,
+            nombrecientifico: "Lorus",
+            color : "Azul",
+            pico : true,
+            nombre : "Balu"
+        };
+
+        var animal2 = {
+            especie : "Pajaros",
+            alas : 2,
+            plumas : true,
+            nombrecientifico: "Lorus",
+            color : "Rojo",
+            pico : true,
+            nombre : "Lorenzo"
+        };        
+
+        class Animal{
+            constructor(especie, alas, plumas, nombrecientifico, color, pico ){
+                this.especie = especie;
+                this.alas = alas;
+                this.plumas = plumas;
+                this.nombrecientifico = nombrecientifico;
+                this.color = color;
+                this.pico = pico;
+            }
+
+            CantidadAlas(){
+                return  "El pajaro tiene: " + this.alas + " alas";
+            }
+        }
+
+
+        var Balu = new Animal ("Pajaros", 2, true, "Lorus", "Verde", true );
+        var Lorenzo = new Animal ("Pajaros", 2, true, "Lorus", "Azul", true );
+        var Test = new Animal ("Pajaros", 2, true, "Lorus", "Azul", true );
+
+        console.log(Balu);
+        console.log(Balu.CantidadAlas());
+        console.log(Lorenzo);
+        console.log(Lorenzo.CantidadAlas());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

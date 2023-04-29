@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+    <script>
+        var animal = {
+            especie : "Pajaro",
+            alas : 2,
+            plumas : true,
+            nombrecientifico: "Lorus",
+            color : "Azul",
+            pico : true
+        };
+
+        var persona = {
+            nombre: "Mario",
+            apellido: "Jimenez",
+            edad: 40,
+            casado: true,
+            nombrecompleto: function(){
+                return this.nombre + " " + this.apellido; 
+            }
+        }
+        
+        console.log(animal);
+        console.log(animal.nombrecientifico);
+        console.log(animal["color"]);
+        console.log(persona);
+        console.log(persona.nombre + " " + persona.apellido);
+        console.log(persona.nombrecompleto());
+
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

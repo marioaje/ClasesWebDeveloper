@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class animal{
+            constructor(patas, ojos, garras, cola, especie, alas, colmillo, nombre, id){
+                this.patas = patas;
+                this.ojos = ojos;
+                this.garras = garras;
+                this.cola = cola;
+                this.especie = especie;
+                this.alas = alas;
+                this.colmillo = colmillo;
+                this.nombre = nombre;
+                this.id = id;
+            }
+
+            obtenerPatas(){
+              // qpatas = this.patas;
+                return this.patas;
+            }
+        }
+
+
+        const conejo = new animal(4, 2, true, true, "Mamifero", false, true, "Bugs", 1);
+        console.log(conejo);
+        console.log(conejo.obtenerPatas());
+
+        class persona{
+            constructor(cedula, nombre){
+                this.cedula=cedula;
+                this.nombre=nombre;
+            }
+
+            obtenerCedula(){
+                return this.cedula;
+            }
+
+            obtenerNombre(){
+                return this.nombre;
+            }
+
+            ajustarNombre(nombreIngresado){
+                this.nombre = nombreIngresado;
+            }
+        }
+
+        const usuario1 = new persona('123', 'Mario');
+        console.log(usuario1);
+        console.log(usuario1.obtenerCedula());
+        console.log(usuario1.obtenerNombre());
+        usuario1.ajustarNombre('Nuevo Mario');
+        console.log(usuario1.obtenerNombre());
+
+        const usuario2 = new persona('1234', 'Isaac');
+        console.log(usuario2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

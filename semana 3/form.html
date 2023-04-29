@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario de registro</h1>
+    <form action="">
+        Nombre: <input type="text"> Apellido <input type="text">
+        <br><br>
+        Edad: <input type="number">
+        <br><br>
+        Email: <input type="email">
+        <br><br>
+        Password: <input type="password">
+        <br><br>
+    </form> 
+    <br><br><br><br>
+    <h1>Formulario con una Lista</h1>
+    <form action="">
+        <ul>
+            <li>
+                Nombre: <input type="text"> Apellido <input type="text">
+            </li>
+            <li>
+                Edad: <input type="number">
+            </li>
+            <li>
+                Email: <input type="email">
+            </li>
+            <li>
+                Password: <input type="password">
+            </li>    
+            <li>
+                Verficacion: <input type="checkbox">
+            </li>
+            <li>
+                Sexo: <input type="radio">Masculino <input type="radio"> Femenino
+            </li>
+            <li>
+                Aceptas los terminos: <input type="checkbox">
+            </li>
+            <li>
+                Dia: <input type="radio" name="horario" id="horario"> 
+                Tarde: <input type="radio" name="horario" id="horario">
+                Noche: <input type="radio" name="horario" id="horario">
+            </li>
+            <li>
+                Cargar Archivo: <input type="file" name="" id="">
+            </li>
+            <li>
+                <label for="Dias:">Dias:</label>
+                <select name="dias" id="dias">
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Miercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sabado</option>
+                    <option value="Domingo">Domingo</option>
+                </select>
+            </li>
+            <li>
+                <label for="TextArea">TextArea</label>
+                <textarea name="respuesta" id="respuesta" cols="20" rows="2">Llenar informacion acerca de usted
+                </textarea>
+            </li>
+            <li>
+                <button type="submit">Enviar o guardar</button>
+                
+                <button type="reset">Borrar datos</button>
+            </li>
+        </ul>
+    </form>
+</body>
+</html>

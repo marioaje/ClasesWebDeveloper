@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="codigo.js"></script>
+    <script>
+        // $(document).ready(function () {
+            
+        //     $("#Suma").click(function (e) { 
+         
+        //         PrimerDato = $("#PrimerDato").val();
+        //         SegundoDato = $("#SegundoDato").val();
+        //         Resultado = parseInt(PrimerDato) + parseInt(SegundoDato);
+
+        //         $("#ResultadoOperacion").text("El resultado es: " + Resultado);//Este en el div
+        //     });
+
+        //     $("#Resta").click(function (e) { 
+        //        alert("Resta");    
+        //     });
+
+        //     $("#Multiplicacion").click(function (e) { 
+        //        alert("Multiplicacion");    
+        //     });            
+
+        //     $("#Division").click(function (e) { 
+        //        alert("Division");    
+        //     });      
+
+        //     $("#Potencia").click(function (e) { 
+        //        alert("Potencia");    
+        //     });      
+
+        //     $("#Porcentaje").click(function (e) { 
+        //        alert("Porcentaje");    
+        //     });      
+        // });
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="mb-3">
+          <label for="" class="form-label"></label>
+          <input type="number"
+            class="form-control" name="PrimerDato" id="PrimerDato" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Ingrese el Primer Dato</small>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label"></label>
+            <input type="number"
+              class="form-control" name="SegundoDato" id="SegundoDato" aria-describedby="helpId" placeholder="">
+            <small id="helpId" class="form-text text-muted">Ingrese el Segundo Dato</small>
+          </div>        
+
+          <a name="Suma" id="Suma" class="btn btn-primary" href="#" role="button">Suma</a>
+          <a name="Resta" id="Resta" class="btn btn-danger" href="#" role="button">Resta</a>
+          <a name="Multiplicacion" id="Multiplicacion" class="btn btn-success" href="#" role="button">Multiplicacion</a>
+          <a name="Division" id="Division" class="btn btn-dark" href="#" role="button">Division</a>
+          <a name="Potencia" id="Potencia" class="btn btn-link" href="#" role="button">Potencia</a>
+          <a name="Porcentaje" id="Porcentaje" class="btn btn-warning" href="#" role="button">Porcentaje</a>
+
+          <div id="ResultadoOperacion">
+                <!-- <input type="text" name="Resultado" id="Resultado"> -->
+          </div>
+
+    </div>
+</body>
+</html>

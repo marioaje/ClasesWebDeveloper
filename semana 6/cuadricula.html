@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadricula</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: brown;
+        }
+
+
+        @media only screen and (max-width: 1024px) {
+            body{
+                background-color: rgb(0, 255, 76);
+            }
+
+            .menu li{
+                background-color: rgb(255, 255, 255);
+            }
+            
+            .menu li:hover{
+                background-color: rgb(90, 212, 34);
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+            body{
+                background-color: blue;
+            }
+
+            .menu li{
+                background-color: rgb(255, 255, 255);
+            }
+
+            .menu li:hover{
+                background-color: rgb(90, 212, 34);
+            }
+        }
+
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        [class *= "col"]{
+            float: left;
+            padding: 15;
+        }
+
+        .col10{
+            width: 10%;
+        }
+        .col20{
+            width: 20%;
+        }        
+        .col30{
+            width: 30%;
+        }
+        .col40{
+            width: 40%;
+        }
+        .col50{
+            width: 50%;
+        }    
+        .col60{
+            width: 60%;
+        }   
+        .col70{
+            width: 70%;
+        }   
+        .col80{
+            width: 80%;
+        }   
+        .col90{
+            width: 90%;
+        }    
+        .col100{
+            width: 100%;
+        }         
+        
+        .header{
+            background-color: rgb(181, 181, 243);
+            color: white;
+            padding: 15px;
+        }
+
+        .footer{
+            background-color: rgb(0, 247, 255);
+            color: white;
+            padding: 15px;
+        }     
+        
+        .menu ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }      
+        
+        .menu li{
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: rgb(247, 0, 255);
+            color: black;
+            box-shadow: 0 1px 3px rgba(108, 193, 196, 1);
+        }
+
+        .menu li:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Header
+    </div>
+    <div class="row">
+        <div class="col20 ">1
+            <ul>
+                <li><a href="estructura.html">Seccion A</a></li>
+                <li><a href="estructura.html">Seccion B</a></li>
+                <li><a href="estructura.html">Seccion C</a></li>
+                <li><a href="estructura.html">Seccion D</a></li>
+            </ul>
+        </div>
+        <div class="col30">2
+            <ul>
+                <li>Seccion A</li>
+                <li>Seccion B</li>
+                <li>Seccion C</li>
+                <li>Seccion D</li>
+            </ul>            
+        </div>
+        <div class="col50 menu">3
+            <ul>
+                <li><a href="estructura.html">Seccion A</a></li>
+                <li><a href="estructura.html">Seccion B</a></li>
+                <li><a href="estructura.html">Seccion C</a></li>
+                <li><a href="estructura.html">Seccion D</a></li>
+            </ul>          
+        </div>
+    </div>
+    <div class="header">
+        <img width="5%" src="https://w7.pngwing.com/pngs/306/863/png-transparent-facebook-logo-facebook-computer-icons-social-media-fb-blue-rectangle-logo.png" alt="">
+    </div>   
+</body>
+</html>

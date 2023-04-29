@@ -1,0 +1,62 @@
+/* Selectores*/
+        body{
+            background-color: chartreuse;
+        }
+        /* h1{
+            text-align: center;
+        } */
+        /* p{
+            font-family: Verdana;
+            font-size: 50px;
+            background-color: azure;
+        } */
+
+/* Por id */
+        #primerparrafo{
+            font-family: Verdana;
+            font-size: 50px;
+            background-color: blue;
+            color: white;
+        }
+
+        #segundoparrafo{
+            font-family: Verdana;
+            font-size: 50px;
+            background-color: coral;
+            color: white;
+        }        
+
+/* Por clases*/
+/* Los estilos de la clase no se muestran si tiene estilos por ID */
+        .frontend{
+            color: red;
+            text-align: center;
+        }
+
+
+/* Por clase pero en un selector determinado*/
+        p.frontend{
+            color: blue;
+            text-align: center;
+        }
+
+        p.fondo{
+            background-color: darkorange;
+        }
+
+        p.letra{
+            font-size: 10px;
+        }
+
+/* Selector universal funciona siempre y 
+cuando no tenga clases ni id's */
+        *{
+            background-color: darkgoldenrod;
+        }
+
+/* Por grupo         */
+        h1, h2, h3{
+            text-align: center;
+            background-color: red;
+            color: white;
+        }   

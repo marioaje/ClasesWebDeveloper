@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="nav-link" href="listarCurso.html">Cursos</a>
+            <a class="nav-link" href="crearCurso.html">Crear Curso</a>
+            <a class="nav-link" href="listarCurso.html">Profesores</a>
+            <a class="nav-link" href="crearCurso.html">Crear Profesores</a>
+            <a class="nav-link" href="listarCurso.html">Estudiantes</a>
+            <a class="nav-link" href="crearCurso.html">Crear Estudiantes</a>
+        </nav>        
+        
+        <div class="container">
+            <h1>Dashboard Listar Curso</h1>
+            <script>
+                function tipodatos() {
+	document.write("17 Enero 2023, mi primer seudocodigo",'<BR/>');
+}
+tipodatos();
+            </script>
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Tiempo</th>
+                            <th scope="col">Acciones</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="datosExtraidos">
+
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Modal Edicion</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h1>Editar Curso</h1>
+                    <form id="formulario">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Id:</label>
+                            <input type="hidden"
+                            class="form-control" name="id" id="id" aria-describedby="helpId" required >
+                            <input type="text"
+                            class="form-control" name="ids" id="ids" aria-describedby="helpId" required disabled>
+                          </div>
+                        <div class="mb-3">
+                          <label for="" class="form-label">Nombre</label>
+                          <input type="text"
+                            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="nombre" required>
+                          <small id="helpId" class="form-text text-muted">nombre</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">descripcion</label>
+                            <input type="text"
+                              class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="descripcion" required>
+                            <small id="helpId" class="form-text text-muted">descripcion</small>
+                          </div>
+                          <div class="mb-3">
+                            <label for="" class="form-label">tiempo</label>
+                            <input type="text"
+                              class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="tiempo" required>
+                            <small id="helpId" class="form-text text-muted">tiempo</small>
+                          </div>  
+                          <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                          </div>                                
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+    </div>    
+</body>
+<script>
+    var contenidoTabla = document.querySelector('#datosExtraidos');
+   
+    var formulario = document.getElementById('formulario');
+    formulario.addEventListener('submit', 
+    function(e){
+        e.preventDefault();
+
+        var datos = new FormData(formulario);
+
+        var datosEnviar = {
+            id:datos.get('id'),
+            nombre:datos.get('nombre'),
+            descripcion:datos.get('descripcion'),
+            tiempo:datos.get('tiempo'),
+            usuario:"profesor Mario"
+        }
+      
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarCursos.php",
+        {
+            method:"POST"  ,
+            body:JSON.stringify(datosEnviar)
+        })
+        .then(repuesta=>repuesta.json())
+        .then((datosRespuesta)=>{
+            alert('Datos actualizados: '+ datosEnviar.id);
+            window.location = 'listarCurso.html';
+        })        
+        .catch(console.log)
+            }
+        )
+    
+    function cargarDatos(){
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php")//uurl del servicio
+        .then(respuesta=>respuesta.json())
+        .then((datosRespuesta)=>{
+           // console.log(datosRespuesta.data)
+            setTabla(datosRespuesta.data)
+            }            
+        )
+        .catch(console.log)
+    }
+
+    function setTabla(datos){
+        for(let valor of datos){
+            //console.log(valor);
+            contenidoTabla.innerHTML += `
+                <tr>
+                        <td>${valor.id}</td>
+                        <td>${valor.nombre}</td>
+                        <td>${valor.descripcion}</td>
+                        <td>${valor.tiempo}</td>
+                        <td>
+                            <a name="" id="" class="btn btn-success" href="#" role="button"  
+                            onclick="editar( ${valor.id}, '${valor.nombre}', '${valor.descripcion}', '${valor.tiempo}' )">Editar</a>
+                            ||
+                            <a name="" id="" class="btn btn-danger" href="#" role="button" onclick="eliminar(${valor.id})">Eliminar</a>
+                        </td>
+                </tr>
+            `;            
+        }
+    }
+
+    function editar(id,nombre,descripcion, tiempo){
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'));
+        myModal.show();
+        $("#nombre").val(nombre);
+        $("#id").val(id);
+        $("#ids").val(id);
+        $("#descripcion").val(descripcion);
+        $("#tiempo").val(tiempo);        
+    }
+
+
+    function eliminar(id){
+        eliminarDatos(id);
+    }
+    
+    function eliminarDatos(id){
+        var datosEnviar = {
+            id: id          
+        }
+
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarCursos.php",
+        {
+            method:"POST"  ,
+            body:JSON.stringify(datosEnviar)
+        })
+        .then(repuesta=>repuesta.json())
+        .then((datosRespuesta)=>{
+            alert('Registro eliminado: '+id);
+            window.location = 'listarCurso.html';
+        })        
+        .catch(console.log)
+    }
+
+    $(document).ready(function () {
+        cargarDatos();
+    });
+
+</script>
+</html>

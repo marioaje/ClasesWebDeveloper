@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Curso</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+  
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="nav-link" href="listarCurso.html">Cursos</a>
+            <a class="nav-link" href="crearCurso.html">Crear Curso</a>
+        </nav>        
+        
+        <div class="container">
+            <h1>Dashboard Curso</h1>
+    <div class="table-responsive">
+        <table class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Tiempo</th>
+                </tr>
+            </thead>
+            <tbody id="datosExtraidos">
+             
+            </tbody>
+        </table>
+    </div>
+    
+            
+        </div>
+    </div>    
+</body>
+<script>
+    
+    var contenidoTabla = document.querySelector('#datosExtraidos');
+    function cargarDatos(){
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php")//Url del servicio
+        .then(respuesta=>respuesta.json())//Solicitamos el json
+        .then((datosRespuesta)=>{
+            
+            setTabla(datosRespuesta.data)
+        })//Cargamos los datos
+        .catch(console.log)
+    }
+
+    function setTabla(datos){
+        // const obj = JSON.parse(datos);
+        // console.log(obj.data);
+   //  console.log(datos);
+       // contenidoTabla.innerHTML = "";
+        for(let valor of datos){
+            console.log(valor);
+            contenidoTabla.innerHTML += `
+                <tr class="">
+                        <td scope="row">${valor.id}</td>
+                        <td>${valor.nombre}</td>
+                        <td>${valor.descripcion}</td>
+                        <td>${valor.tiempo}</td>
+                </tr>
+            `;
+        }
+    }
+
+      /* Por lo que veo usas jQuery */
+    function listarUsuarios() {
+    $.ajax({
+        type: 'POST',
+        url: "https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php",
+        dataType  : 'html',
+        success: function(data){
+            setTablaJson(data);   
+           // console.log(data);
+        $('#tableUsers').html(data);
+        }
+    });
+    }  // listarUsuarios
+
+    /* Segun prefieras o estes más familiazado usa este */
+    // $(function () {
+    //     listarUsuarios();
+    // }); 
+
+    function setTablaJson(datos){
+      //  console.log(datos);
+        const obj = JSON.parse(datos);        
+        for(let valor of obj.data){
+            console.log(valor);
+            contenidoTabla.innerHTML += `
+                <tr class="">
+                        <td scope="row">${valor.id}</td>
+                        <td>${valor.nombre}</td>
+                        <td>${valor.descripcion}</td>
+                        <td>${valor.tiempo}</td>
+                </tr>
+            `;
+        }
+    }
+
+    /* ó; deseable no dejes ambos solo uno */ 
+    $(document).ready(function () {        
+        listarUsuarios();
+       // cargarDatos();
+    }); 
+
+</script>
+</html>
