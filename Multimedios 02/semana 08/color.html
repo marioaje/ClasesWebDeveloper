@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            // $("#color_fondo").click(function(){
+            // var color_fondo_tabla = $("#color_fondo").val();
+
+            // console.log(color_fondo_tabla);
+            // $("#color_fondo_tabla").val(color_fondo_tabla) ;    
+            // // $("td").css("background-color", color_fondo_tabla);
+            // });
+
+            $("#color_fondo").change(function (e) { 
+                e.preventDefault();
+                var color_fondo_tabla = $("#color_fondo").val();
+                $("#color_fondo_tabla").val(color_fondo_tabla) ;           
+            });
+          
+        });
+    </script>
+</head>
+<body>
+
+    <input type="button" value="Generar" id="generar">
+
+    <input type="color" id="color_fondo">
+
+    <input type="text" name="color_fondo_tabla" id="color_fondo_tabla">
+</body>
+</html>

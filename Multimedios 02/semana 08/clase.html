@@ -1,0 +1,84 @@
+<script>
+    // var Computadora = {
+    //     Marca: "Dell",
+    //     Procesador: "Core i7",
+    //     MemoriaRam: "16G",
+    //     Modelo: "Inspiron",
+    //     DiscoDuro: "500 GB",
+    //     Tipo : "Portatil",
+    //     Pulgadas : 16,
+    //     Tactil : true,
+    //     Informacion : function(){
+    //         return "Marca:" + this.Marca + " Procesador:" + this.Procesador + " MemoriaRam:" 
+    //         + this.MemoriaRam + " Modelo:" + this.Modelo   ; 
+    //     }
+    // };
+
+    // var Computadora2 = {
+    //     Marca: "HP",
+    //     Procesador: "Core i7",
+    //     MemoriaRam: "16G",
+    //     Modelo: "Inspiron",
+    //     DiscoDuro: "500 GB",
+    //     Tipo : "Portatil",
+    //     Pulgadas : 16,
+    //     Tactil : true,
+    //     Informacion : function(){
+    //         return "Marca:" + this.Marca + " Procesador:" + this.Procesador + " MemoriaRam:" 
+    //         + this.MemoriaRam + " Modelo:" + this.Modelo   ; 
+    //     }
+    // };
+
+    // var Computadora3 = {
+    //     Marca: "Accer",
+    //     Procesador: "Core i7",
+    //     MemoriaRam: "16G",
+    //     Modelo: "Inspiron",
+    //     DiscoDuro: "500 GB",
+    //     Tipo : "Portatil",
+    //     Pulgadas : 16,
+    //     Tactil : true,
+    //     Informacion : function(){
+    //         return "Marca:" + this.Marca + " Procesador:" + this.Procesador + " MemoriaRam:" 
+    //         + this.MemoriaRam + " Modelo:" + this.Modelo   ; 
+    //     }
+    // };    
+
+    class Computadora{
+        constructor(Marca, Procesador, MemoriaRam, Modelo, DiscoDuro, Tipo, Pulgadas, Tactil){
+            this.Marca = Marca;
+            this.Procesador = Procesador;
+            this.MemoriaRam = MemoriaRam;
+            this.Modelo = Modelo;
+            this.DiscoDuro = DiscoDuro;
+            this.Tipo = Tipo;
+            this.Pulgadas = Pulgadas;
+            this.Tactil = Tactil;
+        }
+
+        Informacion(){
+            return "Marca:" + this.Marca + " Procesador:" + this.Procesador + " MemoriaRam:" 
+            + this.MemoriaRam + " Modelo:" + this.Modelo   ; 
+        }
+
+    }
+
+    let Computadora1 = new Computadora("Dell", "Core i7", "16G", "Inspiron", "500 GB",
+        "Portatil", 16, true);
+    var Computadora2 = new Computadora("Hp", "Core i7", "16G", "Inspiron", "500 GB",
+    "Portatil", 16, true);
+    let Computadora3 = new Computadora("Accer", "Core i7", "16G", "Inspiron", "500 GB",
+    "Portatil", 16, true);                
+
+    console.log(Computadora1);
+    console.log(Computadora1.Informacion());
+    console.log(Computadora2);
+    console.log(Computadora2.Informacion());
+    console.log(Computadora3);
+    console.log(Computadora3.Informacion());
+    // console.log(Computadora);
+
+    // console.log(Computadora.Procesador);
+    // console.log(Computadora.Informacion());
+    // console.log(Computadora["Procesador"]);
+</script>

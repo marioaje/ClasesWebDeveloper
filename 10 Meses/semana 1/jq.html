@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>           
+  </head>
+  <body>
+    <div class="container">
+        <div class="mb-3">
+          <label for="" class="form-label">Name</label>
+          <input type="text"
+            class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="grupo" value="test">
+          <label class="form-check-label" for="test">
+            Default radio
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="grupo" value="12">
+          <label class="form-check-label" for="">
+            Default checked radio
+          </label>
+        </div>
+        <p>
+            Ejercio #1
+
+            Necesito que creen un objeto, el cual reciba los datos por un formulario html5, 
+            y adcionalmente lo imprima en una tabla como el ejercion del objeto
+            Bootstrap 5, y que no permita el envio de datos sin validar (que no vayan vacios)
+
+            Formulario:
+            Id
+            Nombre
+            Apellido Paterno
+            Apellido Materno
+            Fecha de Nacimiento
+            Celular
+            Email
+            Direccion
+            Carrera ( Low Code, Front End, Python) Select Option
+            Provincia  (San Jose, Puntarenas, ...) Select Option
+        </p>
+
+        <form action="" method="post" id="myForm" >
+            <div class="mb-3">
+              <label for="" class="form-label"></label>
+              <input type="text"
+                class="form-control" name="Id" id="Id" aria-describedby="helpId" placeholder="Ingrese su ID" required>
+              <small id="helpId" class="form-text text-muted">Id</small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label"></label>
+                <input type="text"
+                  class="form-control" name="Nombre" id="Nombre" aria-describedby="helpId" placeholder="Ingrese su Nombre" required>
+                <small id="helpId" class="form-text text-muted">Nombre</small>
+            </div>            
+
+              <input type="button" id="" onclick="toggleByName()" value="Enviar">
+              <input type="button" id="" onclick="recolectarDatos()" value="Enviar">
+<!--               
+              <button>Texto</button> -->
+        </form>
+
+    </div>
+       
+  </body>
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('input[name=grupo]').on('change', function() {
+            
+                alert($('input[name=grupo]:checked').val());
+        });
+    });
+
+
+    // $('input[name=grupo]').on('change', function() {
+    //             alert($('input[name=grupo]:checked').val());
+    //     });
+
+    // function toggleByName() {
+    //     alert($('input[name=grupo]:checked').val());
+    //         // var arrChkBox = document.getElementsByName("grupo");
+    //         //     alert(arrChkBox);
+    //         // }
+    // }
+</script>
+
+<!-- // $('#myForm').on('submit', function (e) {
+    //     e.preventDefault();
+    //     alert("cargando");
+    // });
+// $('#myForm').on('submit', function (e) {
+//     e.preventDefault();
+//     alert("cargando");
+// }); -->

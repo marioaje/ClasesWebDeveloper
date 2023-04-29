@@ -1,0 +1,235 @@
+/* Estilo global */
+*{
+    /* text-align: center; */
+    box-sizing: border-box;
+}
+
+body{
+    height: 3600px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.principal{
+    width: 100%;
+}
+
+.header{
+    height: 500px;
+    background-image: url('../img/burger01.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contenedormenu{
+    overflow: auto;
+    position: relative;
+    height: 100px;
+}
+
+.logo{
+    width: 10%;
+    float: left;
+    height: 60px;
+    padding: 6px;
+}
+
+.menu{
+    width: 80%;
+    float: left;
+}
+
+.logoimagen{
+    height: 60px;
+}
+
+.nav{
+    text-align: right;
+}
+
+.nav-link{
+    padding: 10px;
+    font-size: 30px;
+}
+
+.textoblanco{
+    color: white;
+}
+
+.textorojo{
+    color: red;
+}
+
+.infocontendormenu{
+    overflow: auto;
+    position: relative;
+    height: 300px;
+    padding: 20px;
+    width: 50%;
+}
+
+.orderbutton{
+    background-color: red;
+    border-radius: 40px;
+    width: 20%;
+    height: 30px;
+    border: red;
+}
+
+.partes{
+    height: 520px;
+}
+
+.titulochef{
+    text-align: center;
+    height: 60px;
+}
+
+.descripcionchef{
+    text-align: center;
+    height: 60px;
+}
+
+.contendorchef{
+    overflow: auto;
+    position: relative;
+    text-align: center;
+}
+
+.card{
+    width: 33.33%;
+    float: left;
+}
+
+.cardimg{
+    border-radius: 120px;
+}
+
+.fondochef{
+    background-color: #F6EFDD;
+}
+
+.contendorbestburger{
+    overflow: auto;
+    position: relative;
+    text-align: center;
+    padding: 100px;
+}
+
+.orderbuttonblanco{
+    background-color: white;
+    border-radius: 40px;
+    width: 20%;
+    height: 30px;
+    border: white;
+}
+
+.contendorbestburgerdiv{
+    float: left;
+    width: 50%;
+}
+
+.imagenhamburguesaredonda
+{
+    border-radius: 420px;
+    height: 300px;
+}
+
+.fondorojo{
+    background-color: red;
+}
+
+.fondoblanco{
+    background-color: white;
+}
+
+.fondoredondo{
+    height: 135px;
+    width: 135px;
+    border: white;    
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    line-height: 0.8;
+}
+
+.fondocuadrado{
+    border: white;    
+    border-radius: 10%;
+    display: inline-block;
+    border-style: solid;
+    line-height: 0.8;
+    height: 350px;
+    width: 300px;
+}
+
+.botonordergrande{
+    width: 80% !important;
+}
+
+.espaciopadding{
+    padding: 20px;
+}
+
+.espaciopaddinggrande{
+    padding: 50px;
+}
+
+
+.espaciopaddingcard{
+    padding: 110px;
+}
+.textoamarillo{
+    color:yellow;
+}
+
+.fondohamburguesa{
+    height: 500px;
+    background-image: url('../img/burger04_roja.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.divcorreo{
+    text-align: center;
+}
+
+.buttonsuscribe{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: red;
+    height: 32px
+}
+.inputemail{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 30%;
+    border: white;
+    height: 32px
+}
+
+.fondonegro{
+    background-color: black;
+}
+
+.contenedor{
+    overflow: auto;
+    position: relative;
+}
+.footerprincipalcard{
+    width: 40%;
+    float: left;
+}
+.footercard{
+    width: 20%;
+    float: left;
+}
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+.parrafomediano{
+    width: 100%;
+}

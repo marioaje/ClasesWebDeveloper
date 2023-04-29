@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        var Avatar = {
+            Nombre : "Mario",
+            Id : "9524823ufnlwnlwlnwrlnwrlnwrl",
+            Email : "mario.jimenez@academiauatropuntocero.com",
+            Password : "123",
+            UserName : "SuperXDMar",
+            UrlImg : 8900,
+            Edad: 44,
+            completeData: function(){
+                return this.Nombre + " " + this.UserName;
+            }
+        };
+
+        //alert(Avatar.Nombre);        
+        //console.log(Avatar.completeData());
+        function setProperty(){
+            document.getElementById("Nombre").innerHTML = Avatar.Nombre;    
+            document.getElementById("Id").innerHTML = Avatar.Id; 
+            document.getElementById("Email").innerHTML = Avatar.Email; 
+            document.getElementById("Password").innerHTML = Avatar.Password; 
+            document.getElementById("UrlImg").innerHTML = Avatar.UrlImg; 
+            document.getElementById("UserName").innerHTML = Avatar.UserName; 
+            document.getElementById("Edad").innerHTML = Avatar.Edad; 
+            document.getElementById("completeData").innerHTML = Avatar.completeData(); 
+        }
+        //console.log(Avatar);
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Objetos</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Id</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>UserName</th>
+                    <th>UrlImg</th>                   
+                    <th>Informacion Completa</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="Nombre"></td>
+                    <td id="Id"></td>
+                    <td id="Email"></td>
+                    <td id="Password"></td>
+                    <td id="UserName"></td>
+                    <td id="UrlImg"></td>   
+                    <td id="completeData"></td>       
+                    <td id="Edad"></td>          
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+    <script>
+        setProperty();
+    </script>
+</body>
+</html>

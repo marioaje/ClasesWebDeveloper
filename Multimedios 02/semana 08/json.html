@@ -1,0 +1,25 @@
+<script>
+var test =
+    {
+        "Carro":[
+            {"Marca":"Nissan","Modelo":"Xterra","Fabricacion": 2002 },
+            {"Marca":"Toyota","Modelo":"Hilux","Fabricacion": 2022 },
+            {"Marca":"Mitsubishi","Modelo":"Eclipse","Fabricacion": 2002 }
+        ]
+    };
+
+
+var json = '{ "Carro":[ ' +
+            '{"Marca":"Nissan","Modelo":"Xterra","Fabricacion": 2002 },' +
+            '{"Marca":"Toyota","Modelo":"Hilux","Fabricacion": 2022 },' +
+            '{"Marca":"Mitsubishi","Modelo":"Eclipse","Fabricacion": 2002 }' +
+        '] }';    
+
+var obj = JSON.parse(json);
+
+console.log(test);
+
+console.log(json);        
+console.log(obj);    
+console.log(obj.Carro[1].Modelo + ' ' + obj.Carro[1].Fabricacion);        
+</script>

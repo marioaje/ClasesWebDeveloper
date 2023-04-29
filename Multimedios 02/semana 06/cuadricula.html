@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadricula</title>
+    <link rel="stylesheet" href="css/stylecuadricula.css">
+    <style>
+        *{
+    text-align: center;
+    color: blue;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: violet;        
+    padding-top: 10px;
+    width: 100%;
+    margin: 0;
+    float: left;
+}
+
+.footer{
+    background-color: cyan;    
+    margin: 0;
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+}
+
+.main{
+    background-color: gray;   
+    height: 300px;  
+}
+
+.naborder{
+    border: none;
+}
+
+.rss{
+    width: 25%;
+    background-color: green;
+    padding-top: 15px;    
+}
+
+.rsscontent{
+    width: 100%;
+    background-color: green;
+    padding-top: 15px;
+    height: 92%;
+}
+
+.datos{
+    width: 50%;
+    padding-top: 15px;
+    background-color: red;
+}
+
+.menu{
+    width: 25%;
+    padding-top: 15px;
+    background-color: palegreen;
+}
+
+.menuaside{
+    width: 100%;
+    margin-top:10px;
+    background-color: cyan;
+}
+
+.principal{
+    position: absolute;
+    opacity: 0.9;
+    width: auto;
+    left: 8px;
+    right: 8px;
+
+}
+
+.gridrow
+{
+    overflow: auto;
+    position: relative;
+    height: 250px;
+}
+
+.gridrowheader{
+    height: 90px;
+}
+
+.gridrowmain{
+    height: 300px;
+}
+
+.gridrowfooter{
+    height: 50px;
+}
+
+.gridcontent{
+    /* 100/12=8.33 */
+    width: 8.33%;
+    margin: 0;
+    height: 100%;
+    float: left;
+    border-right: 1px solid white;
+    /* background-color:bisque ; */
+}
+
+
+.gridcontentmenu{
+    /* 100/12=8.33 */    
+    margin: 0;
+    height: 100%;
+    float: left;
+    border-right: 1px solid green;
+    /* background-color:bisque ; */
+}
+
+
+.gridcontentrss{
+    /* 100/12=8.33 */    
+    margin: 0;
+    height: 100%;
+    float: left;
+    border-right: 1px solid green;
+    /* background-color:bisque ; */
+}
+
+    </style>
+</head>
+<body>
+<div class="principal">
+    <div class="gridrow gridrowheader naborder">
+        <div class="header naborder ">
+            <h1>Header</h1>        
+        </div>
+    </div>
+    <div class="gridrow gridrowmain naborder">
+        <div class="main naborder ">        
+            <div class="menu naborder gridcontentmenu">
+                <div class="menuaside ">11111</div>
+                <div class="menuaside ">2</div>
+                <div class="menuaside ">3</div>
+                <div class="menuaside ">4</div>
+            </div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <div class="gridcontent"></div>
+            <!-- <div class="dato naborder">Datos</div> -->
+            <div class="rss naborder gridcontentrss">
+                <div class="rsscontent ">
+                    Rss
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gridrow gridrowfooter naborder">
+        <div class="footer naborder">
+            <h2>Footer</h2>        
+        </div>
+    </div>
+</div>
+</body>
+</html>

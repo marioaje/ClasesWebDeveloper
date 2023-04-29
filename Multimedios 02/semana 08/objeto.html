@@ -1,0 +1,22 @@
+<script>
+    var Computadora = {
+        Marca: "Dell",
+        Procesador: "Core i7",
+        MemoriaRam: "16G",
+        Modelo: "Inspiron",
+        DiscoDuro: "500 GB",
+        Tipo : "Portatil",
+        Pulgadas : 16,
+        Tactil : true,
+        Informacion : function(){
+            return "Marca:" + this.Marca + " Procesador:" + this.Procesador + " MemoriaRam:" 
+            + this.MemoriaRam + " Modelo:" + this.Modelo   ; 
+        }
+    };
+
+    console.log(Computadora);
+
+    console.log(Computadora.Procesador);
+    console.log(Computadora.Informacion());
+    console.log(Computadora["Procesador"]);
+</script>

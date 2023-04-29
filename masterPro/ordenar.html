@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+    <title>
+        How to Sort/Order keys
+        in JavaScript objects ?
+    </title>
+      
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            color: green;
+        }
+        #geeks {
+            font-size: 20px; 
+            font-weight: bold;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>           
+</head>
+  
+<body>
+    <h1>GeeksforGeeks</h1>
+    <script>
+    //.ArraySort(array)
+        /* Sort an array
+         */
+       
+         ArraySort = function(array, sortFunc){
+              var tmp = [];
+              var aSorted=[];
+              var oSorted={};
+
+              for (var k in array) {
+                if (array.hasOwnProperty(k)) 
+                    tmp.push({key: k, value:  array[k]});
+              }
+
+              tmp.sort(function(o1, o2) {
+                    return sortFunc(o1.value, o2.value);
+              });                     
+
+              if(Object.prototype.toString.call(array) === '[object Array]'){
+                  $.each(tmp, function(index, value){
+                      aSorted.push(value.value);
+                  });
+                  return aSorted;                     
+              }
+
+              if(Object.prototype.toString.call(array) === '[object Object]'){
+                  $.each(tmp, function(index, value){
+                      oSorted[value.key]=value.value;
+                  });                     
+                  return oSorted;
+                  }               
+            };
+
+
+                console.log("ArraySort");
+                var arr1 = [4,3,6,1,2,8,5,9,9];
+                var arr2 = {'a':4, 'b':3, 'c':6, 'd':1, 'e':2, 'f':8, 'g':5, 'h':9};
+                var arr3 = {a: 'green', b: 'brown', c: 'blue', d: 'red'};
+                var result1 = ArraySort(arr1, function(a,b){return a-b});
+                var result2 = ArraySort(arr2, function(a,b){return a-b});
+                var result3 = ArraySort(arr3, function(a,b){return a>b});
+                console.log(result1);
+                console.log(result2);       
+                console.log(result3);
+    </script>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="">      
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="" checked>
+      <label class="form-check-label" for="">
+        Checked checkbox
+      </label>
+    </div>
+</body>
+  
+</html>
